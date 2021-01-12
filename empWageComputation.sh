@@ -1,21 +1,24 @@
-#!/bin/bash -x 
+#!/bin/bash -x
 
-#constant
-EMP_RATE_PER_HR=20
-FULL_TIME=1
-PART_TIME=2
+empRatePerHr=20
+isFullTime=1
+isPartTime=2
+totalSalary=0
+
 
 	empCheck=$(( RANDOM%3 ))
 	case $empCheck in
-		$FULL_TIME)
-		echo empHrs=8
-		echo dailyWage=$(( $EMP_RATE_PER_HR*$FULL_TIME ))
+		$isFullTime)
+		   echo	empHrs=8
 			;;
-		$PART_TIME)
-		        echo empHrs=4
-			echo dailyWage=$(( $EMP_RATE_PER_HR*$PART_TIME ))
+		$isPartTime)
+		    echo empHrs=4
 			;;
 		*)
 			echo empHrs=0
 			;;
 	esac
+salary=$(($empHrs*$empRatePerHr))
+
+
+
