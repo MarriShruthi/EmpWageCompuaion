@@ -4,7 +4,7 @@ empRatePerHr=20
 isFullTime=1
 isPartTime=2
 totalSalary=0
-numWorkingDays=30
+numWorkingDays=20
 
 for (( day=1; day<=$numWorkingDays; day++))
 do
