@@ -1,18 +1,21 @@
-#!/bin/bash -x
+#!/bin/bash -x 
 
 #constant
-IS_PRESENT=1
 EMP_RATE_PER_HR=20
-FULL_TIME=8
+FULL_TIME=1
+PART_TIME=2
 
-#variable
-empCheck=$(( RANDOM%2 ))
-dailyWage=0
-
-if [ $empCheck -eq $IS_PRESENT ]
-then
-	echo "Employee is present"
-	echo dailyWage=$(( $EMP_RATE_PER_HR*$FULL_TIME ))
-else
-	echo "Employee is absent"
-fi
+	empCheck=$(( RANDOM%3 ))
+	case $empCheck in
+		$FULL_TIME)
+		echo empHrs=8
+		echo dailyWage=$(( $EMP_RATE_PER_HR*$FULL_TIME ))
+			;;
+		$PART_TIME)
+		        echo empHrs=4
+			echo dailyWage=$(( $EMP_RATE_PER_HR*$PART_TIME ))
+			;;
+		*)
+			echo empHrs=0
+			;;
+	esac
