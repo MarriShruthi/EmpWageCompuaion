@@ -1,14 +1,7 @@
 #!/bin/bash -x
 
-<<<<<<< HEAD
+
 #constant
-=======
-empRatePerHr=20
-isFullTime=1
-isPartTime=2
-totalSalary=0
-numWorkingDays=20
->>>>>>> f88b753b8bef123f729f1c3459e07332e14157fe
 
 EMP_RATE_PER_HR=20
 IS_FULL_TIME=1
