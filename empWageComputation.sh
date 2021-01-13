@@ -39,7 +39,9 @@ do
 	totalEmpHrs=$(($totalEmpHrs+$empHrs))
 	dailyWage[$totalWorkingDays]=$(calDailywage $empHrs)
 done
-echo totalWage=$(($totalEmpHrs*$EMP_RATE_PER_HR))
+totalWage[1]=$(($totalEmpHrs*$EMP_RATE_PER_HR))
+echo "Day:"${!dailyWage[@]}
 echo "Daily Wage:"${dailyWage[@]}
+echo "TotalWage:"${totalWage[@]}
 
 
